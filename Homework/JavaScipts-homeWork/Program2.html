@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP to find out simple interest , of given number</title>
+</head>
+<body>
+    <h1 style="font-size: 1.3rem; font-weight: 800;">WAP to find out simple interest , of given number</h1>
+    
+
+    <script>
+        var p = parseFloat(prompt("Enter Your Principle Amount"))
+        var r = parseFloat(prompt("Enter Your Rate Amount"))
+        var t = parseFloat(prompt("Enter Your Durations:"))
+
+        //calculation
+
+        var s = (p * r * t)/100
+
+        //format
+
+        document.write(`<br>Simple Interest of Amount is (Principle: ${p}, Rate: ${r} and Time: ${t}) = ${s + p}`)
+    </script>
+</body>
+</html>

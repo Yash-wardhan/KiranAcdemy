@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Calculator</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <form action="/cal" method="post" >
+                <div class="container mt-5">
+                    <h1 class="mb-4">Calculator</h1>
+                    <div class="row">
+                    <div class="col-md-3">
+                        <input type="number" class="form-control mb-3" id="firstNumber" name="fnumber" placeholder="Enter first number">
+                    </div>
+                    <div class="col-md-3" name="operation">
+                        <select class="form-control mb-3" name="operation" id="operation">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" class="form-control mb-3" id="secondNumber" name="snumber" placeholder="Enter second number">
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-block" type="submit"">Calculate</button>
+                    </div>
+                    </div>
+                </div>
+        </form>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display | Link | list</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box;}
+        ul{
+            background-color: #414144;
+            color: white;
+            padding: 10px 20px;
+            max-width: 90%;
+            margin: 0 auto;
+            list-style: circle;
+        }
+        ul li{
+            display: inline;
+            margin:  0 20px;
+        }
+        span{
+            /* br is style will used in html -->CSS in block  */
+            display: block;
+        }
+        img{
+            transition: .5s ease-in-out;
+            filter: blur(3px);
+            scale: .7;
+            gap: 50px;
+            margin: 400px 0;
+        }
+        img:hover{
+            opacity: 0.57;
+            filter: blur(0px);
+            scale: 1;
+            border: 2px dotted red;
+        }
+        p{
+            overflow-x:scroll;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Course</li>
+    </ul>
+
+    <span>
+        This is span 1
+    </span>
+    <span>
+        This is span 2
+    </span>
+    <span>
+        This is span 3
+    </span>
+
+    <div style="height: 500px; padding: 100px 500px;">
+        <img src="https://images.pexels.com/photos/14850795/pexels-photo-14850795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="300px">
+        <img src="https://images.pexels.com/photos/14850795/pexels-photo-14850795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="300px">
+        <img src="https://images.pexels.com/photos/14850795/pexels-photo-14850795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="300px">
+    
+    </div>
+    
+    <p style="height: 200px; width: 200px; border: 3px solid #ddd; ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veniam repudiandae ipsum quaerat odio, eveniet quam iusto. Eveniet, ad! Eius voluptatem porro est, odio nesciunt alias! Amet ducimus maiores eum quo dolor qui quisquam recusandae a porro facilis, repudiandae nulla.
+    </p>
+</body>
+</html>

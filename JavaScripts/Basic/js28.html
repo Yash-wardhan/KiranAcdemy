@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact | Reverse | paldrome | max number</title>
+</head>
+<body>
+    <h5>1. Factorial
+        2  Reverse String
+        3. palnadrome 
+        4. print max number --array</h5>
+
+        <form name="f1">
+            <table>
+
+                <tr>
+                    <td>String Value:</td>
+                    <td><input type="text" name="str"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Factorial" onmouseenter="fact()">
+                    <input type="button" value="Reverse" onmousemove="rev()">
+                    <input type="button" value="Pal" onmouseout="pal()">
+                    <input type="button" value="Max" onmouseover="Maximum()"></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            var str 
+            function fact(){
+                str = parseInt(f1.str.value)
+                fact = 1
+                for(var i = 1 ; i<=str ; i++){
+                    fact = fact*i
+                }
+                document.write(`Factorial of ${str} = ${fact}`)
+            }
+            function rev(){
+                str = f1.str.value
+                const strRev =  str.split('').reverse().join('');
+                document.write(`Reverse of String (${str}) = ${strRev}`)
+            }
+            function pal(){
+                str = f1.str.value
+                let isPalindrome = true;
+                for(var i = 0 ; i< str.length ; i++){
+                    if(str[i] !== str[str -1 -i]){
+                        isPalindrome = false 
+                    }
+                }
+                document.write(` check is ${isPalindrome}`)
+            }
+            function Maximum(){
+                var a = []
+                var b = parseInt(prompt("How many Number you want find max number = "))
+                for(var i =0 ; i<b ; i++){
+                    a.push(parseInt(prompt(`Enter You Number items:${i+1} = `)))
+                }
+                document.write(`max number are = ${Math.max(...a)}`)
+            }
+        </script>
+</body>
+</html>

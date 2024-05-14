@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<style>
+    table{
+        width: 50%;
+    }
+</style>
+<body>
+    <h5>WAP function to get the value of form name including text boxes ,radio button , check boxes , drop down list etc and print console</h5>
+
+    <form name="f1">
+        <fieldset>
+        <table>
+                <legend>Form tag</legend>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" id="fname"></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" id="lname"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" value="Male" name="gender">Male
+                        <input type="radio" value="Female" name="gender">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Position
+                    </td>
+                    <td>
+                        <input type="checkbox" name="pos" value="Developer">Developer
+                        <input type="checkbox" name="pos" value="Frontend">Frontend
+                        <input type="checkbox" name="pos" value="Backend">Backend
+                        <input type="checkbox" name="pos" value="AL/ML Developer">AL/ML Developer
+                        <input type="checkbox" name="pos" value="Other">Other
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Submit" onclick="Submit()"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <script>
+        function Submit(){
+            console.log("its working")
+            var fname = document.getElementById("fname").value
+            var lname = document.getElementById("lname").value
+            var gender = document.f1.gender.value
+
+            //for checkbox
+            var Position = document.getElementsByName('pos')
+            var selectedBox = []
+            for(var i = 0 ; i < Position.length ; i++ ){
+                if(Position[i].checked){
+                    selectedBox.push(Position[i].value)
+                }
+            }
+
+            //check 
+            console.log("First Name :",fname)
+            console.log("Last Name :",lname)
+            console.log("Gender :",gender)
+            console.log("Position :",selectedBox)
+        }
+    </script>
+</body>
+</html>

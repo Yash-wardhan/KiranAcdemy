@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    WAP to print multiplication table
+    <script>
+
+        var n1 = parseInt(prompt("Value"))
+
+        document.write(`<table border = 3 cellpadding = 7 width = "300px">`)
+        for (var i = 1 ; i < 11 ; i++ )
+        {
+            document.write(`<tr><td>${n1}</td> <td>*</td><td>${i}</td> <td>= </td><td>${n1*i}</td></tr>`)
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

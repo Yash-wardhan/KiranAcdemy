@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<pre>Enter 3 subject marks from user --hindi,eng and marathi 
+follow cer.
+
+marathi >=50
+eng >=70
+hindi >= 67
+total >=200  --- student is eligible for admission
+
+  - student is not eligible for admission
+</pre>
+<script>
+    var m = parseInt(prompt("Enter your Marks in Marathi:"))
+    var e = parseInt(prompt("Enter your Marks in English:"))
+    var h = parseInt(prompt("Enter your Marks in Hindi:"))
+
+    var t = e+h+m
+    if(m >=50 && e >=77 && h >=67){
+        alert("student is eligible for admission : "+t+"total marks")
+    }
+    else{
+        alert("student is not eligible for admission : "+t+"total marks")
+    }
+</script>
+</body>
+
+</html>

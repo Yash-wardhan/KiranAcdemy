@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Tag -- Unordered List and ordered List</title>
+</head>
+<style>
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: #ddd;
+    }
+    p{
+        display: flex;
+        justify-content: center;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+    ul{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        list-style: none;
+    }
+    li{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        transition: .3s all ease-in;
+        width: 60%;
+        cursor: pointer;
+    }
+    ul li:hover{
+        font-size: 1.9rem;
+        width: 80%;
+    }
+
+</style>
+<body>
+    <p>Properties in html</p>
+    <ul>
+        <li>Font color</li>
+        <li>Font size</li>
+        <li>Background color</li>
+        <li>Text algin</li>
+    </ul>
+</body>
+</html>

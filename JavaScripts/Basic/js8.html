@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <script>
+        var n1 = parseInt(prompt("Enter Your First Number:")) 
+        var n2 = parseInt(prompt("Enter Your Second Number:"))
+        var operator = prompt("Enter Your operator:")
+
+        
+        switch(operator){
+            case '+' : console.log("Addition: - "+(n1+n2));
+                     break;
+            case '-' : console.log("Subtration: - "+(n1-n2));
+                     break;
+            case '/' : console.log("Multiply: - "+(n1*n2));
+                     break;
+            case '*' : console.log("Divide: - "+(n1/n2));
+                     break;
+            default: console.log("Invalid Input")
+        }
+    </script>
+</body>
+</html>

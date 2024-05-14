@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+</head>
+<body>
+    <h3><pre>wap to print following pattern - 
+
+
+        1 2 3 4 5
+        1 2 3 4
+        1 2 3 
+        1 2
+        1
+        </pre>
+    </h3>
+    <script>
+        const rows = 5;
+
+        for (let i = rows; i > 0; i--) {
+            let output = '';
+            for (let j = 1; j <= i; j++) {
+                output += j + ' ';
+            }
+            document.write(output + '<br>');
+        }
+
+
+    </script>
+</body>
+</html>

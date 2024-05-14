@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP to print area of triangle , Square , Circle</title>
+</head>
+<body>
+    <h1 style="font-size: 1.3rem; font-weight: 800;">
+        Question: WAP to print area of triangle , Square , Circle
+    </h1>
+
+    <script>
+        // take input from user 
+
+        var l = parseFloat(prompt("Enter Your Length Of Triangle:"))
+        var h = parseFloat(prompt("Enter Your Height Of Triangle:"))
+        var s = parseFloat (prompt("Enter Your Side OF Square:"))
+        var r = parseFloat (prompt("Enter Your Radius of Circle:"))
+
+
+        // Calculation 
+
+        var areaTriangle = 1/2 * l * h
+        var areaSquare = s * s
+        var areaCircle = 3.14 * r * r
+
+        //Format 
+
+        document.write(`<br>Area of Triangle(Length: ${l} and Breadth: ${h}) : ${areaTriangle} </br>`)
+        document.write(`Area of Square(Side: ${s}) : ${areaSquare} </br>`)
+        document.write(`Area of Circle(Radius: ${r}) : ${areaCircle} </br>`)
+    </script>
+</body>
+</html>

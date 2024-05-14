@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h5>Complete Form Validation onblur onsubmit (//Radio button(required) , checkbox , dropdown )</h5>
+        <form id="myForm" onsubmit="return validateForm()" novalidate>
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" id="name" required onblur="validateName()" onfocus="clearError('nameError')"></td>
+                    <td><span id="nameError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" id="email" required></td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td>
+                        <input type="radio" name="gender" id="male" value="male" required onchange="clearError('genderError')">Male
+                        <input type="radio" name="gender" id="female" value="female" required onchange="clearError('genderError')">Female
+                    </td>
+                    <td><span id="genderError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td>Hobbies :</td>
+                    <td>
+                        <select name="hobbies" id="hobbies" required onchange="clearError('hobbiesError')">
+                            <option value="">Select Hobby</option>
+                            <option value="Music">Music</option>
+                            <option value="Reading">Read</option>   
+                            <option value="Sports">Sports</option> 
+                            <option value="Art">Art</option>  
+                        </select>
+                    </td>
+                    <td><span id="hobbiesError" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit">&nbsp;&nbsp;
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var hobbies = document.getElementById('hobbies').value;
+
+            if (!name || !gender || !hobbies) {
+                alert('Please fill in all fields.');
+                return false;
+            }
+
+            // You can add more specific validation logic here if needed
+
+            return true;
+        }
+
+        function validateName() {
+            var name = document.getElementById('name').value;
+            var nameError = document.getElementById('nameError');
+
+            if (name.trim() === '') {
+                nameError.textContent = 'Name is required';
+            } else {
+                nameError.textContent = '';
+            }
+        }
+
+        function clearError(field) {
+            var errorElement = document.getElementById(field);
+            if (errorElement) {
+                errorElement.textContent = '';
+            }
+        }
+    </script>
+</body>
+</html>

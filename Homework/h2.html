@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+</head>
+<style>
+    fieldset{
+        width: 50%;
+        border: 1px dashed dodgerblue;
+    }
+    table{
+        width: 100%;
+    }
+</style>
+<body>
+    <center>
+        <h1>Register User</h1>
+    <form>
+        <fieldset>
+            <legend align="center"><h3>Register User</h3></legend>
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>City of Employment:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Web server:</td>
+                <td>
+                    <select>
+                    <option>-----Choose a server</option>
+                    <optgroup label="Python">
+                        <option value="1">Django</option>
+                        <option value="2">Flask</option>
+                        <option value="3">Fast API</option>
+                        <option value="4">Other</option>
+                    </optgroup>
+                    <optgroup label="Javascript">
+                        <option value="5">Node/Express Javascript</option>
+                        <option value="6">BUN</option>
+                        <option value="7">React Javascript</option>
+                        <option value="8">Other</option>
+                    </optgroup>
+                    <optgroup label="Java">
+                        <option value="9">Spring </option>
+                        <option value="10">Apache</option>
+                    </optgroup>
+                    <optgroup label="Php">
+                        <option value="11">Larvel</option>
+                        <option value="12">Other</option>
+                    </optgroup>
+                    <option value="13">Other Technology</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Please specify your role:</td>
+                <td>
+                    <table>
+                        <tr><td><input type="radio" name="pos"> Admin</td></tr>
+                        <tr><td><input type="radio" name="pos"> Engineer</td></tr>
+                        <tr><td><input type="radio" name="pos"> Manager</td></tr>
+                        <tr><td><input type="radio" name="pos"> Guest</td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Single Sign-on the following:</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="checkbox">Mail
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">Payroll
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">Self-service
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <pre>
+                    <td><button>Login</button> <button>Reset</button></td>
+                </pre>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>

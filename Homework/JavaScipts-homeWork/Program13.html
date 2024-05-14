@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>write a js program to create another string by adding "py" in front of a given string. if the given begins with "py" thne return the original string using func</h5>
+    <form name="f1">
+        <table>
+            <tr>
+                <td>Enter Your String = </td>
+                <td><input type="text" name="str"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Check" onmousemove="checkstr()"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var str , checktwoword;
+        function checkstr(){
+            str = f1.str.value
+            checktwoword = [...str]
+            checktwoword = checktwoword.slice(0,2).join('')
+            console.log(checktwoword)
+            if (checktwoword =='py'){
+                console.log(checktwoword)
+                console.log(str)
+                document.write(`${str} ---"no change in py"`)
+            }
+            else{
+                str = [...str]
+                str.unshift('p','y')
+                str = str.join('')
+                document.write(`${str} ---"is change in py"`)
+            }
+        }
+    </script>
+</body>
+</html>

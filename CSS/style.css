@@ -1,0 +1,11 @@
+span{
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 3px;
+    padding: 0;
+}
+h1{
+    border:7px dotted #ddd ;
+    margin: 100px auto;
+}

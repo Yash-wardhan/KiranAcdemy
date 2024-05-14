@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+</style>
+<body>
+
+    <h1>display  number from 10 to 50 if number is divisible by 3 the print FIZZ , if number is divisible by by 5 then print BIZZ ,if  number divisble by 3 n 5 then print FIZZBIZZ otherwise No FIZZ NO BIZZ</h1>
+    <script>
+
+        //int
+
+        var n1 = 10 ;
+        var n2 = 50;
+
+        var a = "FIZZ"
+        var b = "BIZZ"
+        var c = "FIZZ-BIZZ"
+        var d = "No FIZZ NO BIZZ"
+        //logic
+
+        document.write("<table border = '5' cellpadding = 20 >")
+            for(var i = n1 ; i<=n2 ; i++ ){
+                if(i%15==0){
+                    document.write(`<tr><td>${i}</td><td>${c}</td></tr>`)
+                }
+                else if(i%5==0){
+                    document.write(`<tr><td>${i}</td><td>${b}</td></tr>`)
+                }
+                else if(i%3==0){
+                    document.write(`<tr><td>${i}</td><td>${a}</td></tr>`)
+                }
+                else{
+                    document.write(`<tr><td>${i}</td><td>${d}</td></tr>`)
+                }
+            }
+        document.write("</table>")
+
+    </script>
+</body>
+</html>

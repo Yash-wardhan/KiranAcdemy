@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks</title>
+</head>
+<body>
+
+
+
+    <script>  
+    var name = prompt("Enter Your Name") 
+    var stNo = parseInt(prompt("Enter Your Roll"))
+    var m1 = parseInt(prompt("Enter Your M1")) 
+    var m2 = parseInt(prompt("Enter Your M2")) 
+    var m3 = parseInt(prompt("Enter Your M3"))
+    var total = m1 + m2+ m3
+    percentage = (total/300)*100
+    var grade
+    if( percentage >=70 ){
+        grade = 'Distinction'
+    }
+    else if( percentage >=60 && percentage <70 ){
+        grade = 'First Class'
+    }
+    else if( percentage >=50 && percentage <60 ){
+        grade = 'First Class'
+    }
+    else if( percentage >=40 && percentage <50 ){
+        grade = 'Second Class'
+    }
+    else if( percentage >=33 && percentage <40 ){
+        grade = 'Third Class'
+    }
+    else{
+        grade = 'Fail'
+    }
+
+
+    document.write("<table cellpadding = '7' width = '70%' border = 3 width='300'align = 'center'>")
+    document.write("<tr><th>Roll Number</th><th>Student Name</th><th>M1</th><th>M2</th><th>M3</th><th>Total Marks</th><th>Percentage</th><th>Grade</th></tr>")
+    document.write("<tr><td>"+stNo+"</td><td>"+name+"</td><td>"+m1+"</td><td>"+m2+"</td><td>"+m3+"</td><td>"+total+"</td><td>"+ percentage +"</td><td>"+grade+"</td></tr></table>")
+    console.table([stNo,name,m1,m2,m3,total])
+    </script>
+</body>
+</html>

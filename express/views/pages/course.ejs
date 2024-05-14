@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/header')  %>
+    <div class="h-100 w-100 container" style="height: 100vh; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <h3 class="text-warning">This is course Page</h3>
+        <div class="container">
+            <ul class="text-white">
+                <% data.map((item)=>{ %>
+                    <li>
+                        <h2><%= item.cname %></h2>
+                        <p><%= item.duration %></h2>
+                        <p><%= item.fees %></h2>
+                    </li>
+               <% }) %>
+            </ul>
+        </div>
+    </div>
+    <%- include('../partials/footer') %>
+</body>
+</html>

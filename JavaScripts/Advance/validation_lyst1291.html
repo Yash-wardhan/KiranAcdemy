@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="registrationForm" onsubmit="return validateForm()">
+        <table>
+           <tr>
+            <td>User Name:</td>
+            <td><input type="text" name="uname" id="uname" required onblur="validateInput(this.id)"></td>
+            <td id="errUname"></td>
+           </tr>
+
+           <tr>
+            <td>Email:</td>
+            <td><input type="email" name="email" id="email" required onblur="validateInput(this.id)"></td>
+            <td id="errEmail"></td>
+           </tr>
+
+           <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password" id="password" required onblur="validateInput(this.id)"></td>
+            <td id="errPassword"></td>
+           </tr>
+
+           <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"></td>
+           </tr>
+
+        </table>
+    </form>
+    
+    <script>
+     function validateInput(id) {
+       var inputField = document.getElementById(id);
+       var errorField = document.getElementById("err" + id.charAt(0).toUpperCase() + id.slice(1)); // Capitalize first letter
+       var pattern;
+       var errorMessage;
+       
+       if (id === "uname") {
+            pattern = /^[A-Za-z]{1,20}$/; // Allow letters only, between 1 to 20 characters
+            errorMessage = "Invalid User Name";
+       } else if (id === "email") {
+            pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format validation
+            errorMessage = "Invalid Email";
+       } else if (id === "password") {
+            pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/; // Password must be at least 8 characters, include one uppercase, one lowercase, and one number
+            errorMessage = "Invalid Password";
+       }
+
+       if (!inputField.value.match(pattern)) {
+            errorField.innerHTML = "<span style='color:red'>" + errorMessage + "</span>";
+            inputField.focus();
+            inputField.value = "";
+            return false;
+       } else {
+            errorField.innerHTML = "<img src='correct.jpg' width='20px' height='20px'>";
+            return true;
+       }
+     }
+
+     function validateForm() {
+       return validateInput("uname") && validateInput("email") && validateInput("password");
+     }
+    </script>
+</body>
+</html>

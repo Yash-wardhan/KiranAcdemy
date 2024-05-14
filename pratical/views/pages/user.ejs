@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 100%; padding: 10px 20px; display: flex; flex-direction: column; justify-content: center;">
+    <%- include('../partials/header')  %>
+    <div class="container">
+        <ul class="text-white">
+            <% data.map((item)=>{ %>
+                <li>
+                    <h2>Student id: <%= item.stu_id %></h2>
+                    <p>Student Name:<%= item.stu_name %></h2>
+                    <p>Student Marks <%= item.stu_marks %></h2>
+                </li>
+           <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

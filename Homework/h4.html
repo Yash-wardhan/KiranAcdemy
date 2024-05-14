@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+    <style>
+        html{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            text-transform: uppercase;
+            box-shadow: 2px 3px 25px #ddd;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            width: 700px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h5>WAP get a two number from user and print half faulty number  23 + 56 = 555 , 67/4 = 4 and 34*7 = 180</h5>
+
+    <p>Solution: </p>
+
+    <script>
+
+        //intizations 
+        var n1 = parseInt(prompt("Enter Your First Number:"))
+        var n2 = parseInt(prompt("Enter Your Second Number:"))
+        var operator = prompt("Enter Your Operator:")
+        var value
+
+
+        //check the half faulty number as special case
+        if ((n1 == 23 || n1 == 56) && (n2 ==23 || n2 ==56) && operator == '+' ){
+            document.write(`${n1} + ${n2} = 555`)
+        }
+        else if(n1 == 67 && n2 == 4 && operator=='/'){
+            document.write(`${n1} / ${n2} = 4`)
+        }
+        else if((n1 == 34 || n1 == 7) && (n2 ==34 || n2 ==4) && operator == '*'){
+            document.write(`${n1} * ${n2} = 180 `)
+        }
+        //check all special case
+        else{
+            if (operator == '+'){
+                value = n1 + n2
+                document.write(`${n1} + ${n2} = ${value} `)
+            }
+            else if(operator == '-'){
+                value = n1 - n2
+                document.write(`${n1} - ${n2} = ${value} `)
+            }
+            else if(operator == '/'){
+                value = n1 / n2
+                document.write(`${n1} / ${n2} = ${value} `)
+            }
+            else if(operator == '*'){
+                value = n1 * n2
+                document.write(`${n1} * ${n2} = ${value} `)
+            }
+            else {
+                alert(`Invalid Input operator : ${operator}`)
+            }
+        }
+
+</script>
+</body>
+</html>

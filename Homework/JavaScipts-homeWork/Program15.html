@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h5>Wap modify the style of the paragraph text through js </h5>
+    <p class="change" id="change">
+        This Paragraph will be change by click a button
+    </p>
+    <button onclick="modify()">Change Paragraph</button>
+    <script>
+        function modify(){
+            var a = document.getElementById('change')
+            console.log(a.innerHTML)
+            a.innerHTML = "<p style='color:blue;border:1px solid #ddd'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro mollitia reiciendis aspernatur. Dolor qui provident eius quibusdam tempora architecto dignissimos quis molestias, numquam impedit doloribus omnis nihil aliquid quo, repudiandae consectetur autem eum hic ex repellat laudantium eos, quam quas? Sit blanditiis et voluptas impedit? Quod veritatis earum veniam iste?</p>"
+        }
+    </script>
+</body>
+</html>

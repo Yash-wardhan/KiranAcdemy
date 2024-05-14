@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Student Profile Form</h2>
+  <form method="post" action="/submitStu">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" name="student" class="form-control" id="name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <select class="form-control" id="age" name="age">
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select class="form-control" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="hobbies">Hobbies:</label>
+      <select class="form-control" id="hobbies" name="hobbies" multiple>
+        <option value="Reading" >Reading</option>
+        <option value="Painting">Painting</option>
+        <option value="Playing  Guitar">Playing Guitar</option>
+        <option value="Singing">Singing</option>
+        <option value="Dancing">Dancing</option>
+        <option value="Cooking">Cooking</option>
+        <option value="Photography">Photography</option>
+        <option value="Writing">Writing</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="city">City:</label>
+      <select class="form-control" id="city" name="city">
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Pune">Pune</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

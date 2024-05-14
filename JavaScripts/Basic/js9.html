@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOPING</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            border: 123px solid #ddd;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Looping Statement --iterative control structure
+
+        Welcome --10 times
+
+        there are 3 loop are - 
+           1. for loop
+              for (intial value ; condition ; increment)
+           2. while loop
+           3. do while loop
+     -->
+    <script>
+
+
+        // for(var i = 0 ; i<10 ; i++){
+        //     document.write(`${i+1} <br>`)
+        // }
+
+        // adding of first 10 number 
+        var sum = 0
+        for (var i = 0 ; i<= 10 ; i++ ){
+            sum = sum + i
+            document.write(`i of ${i} = ${sum} <br>`)
+        }
+        document.write (`sum of ${sum}`)
+    </script>
+</body>
+</html>

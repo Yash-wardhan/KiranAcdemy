@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="post">
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" id="uname" onfocus="fun1(this.id)" onblur="fun2(this.id)"></td>
+                <td id="err"></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="email" id="email" onfocus="fun1(this.id)" onblur="fun2(this.id)" required></td>
+                <td id="err1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>Submit</button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        const fun1 = (id)=>{
+            if(id == 'uname'){
+                console.log(err)
+                err.innerHTML='<p style="font-size:.8rem;color:green">Please enter your Name<p>';
+            }
+            else{
+                err1.innerHTML = '<p style="font-size:.8rem;color:green">Please Enter a Valid  Email Id</p>'
+            }
+        }
+        const fun2=(id)=>{
+            var pattern = /(^([a-zA-Z])$\
+            if(id == 'uname'){
+                err.innerHTML=" "
+
+            }
+        }
+    </script>
+</body>
+</html>

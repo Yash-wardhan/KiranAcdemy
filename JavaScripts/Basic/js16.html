@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+    </style>
+</head>
+<body>
+    <h4>Ask user how many days in leap year good you can go next level if user correct answer then ask another question which month has extra  date if user correct the print congrats user name... if not not anwser pls try again so answser is wrong sorry you have not cleared the test </h4>
+    <script>
+        var name = prompt("Enter Your Name:")
+        var q1 = prompt("how many days in leap year")
+        //logic
+        if(q1 == 366){
+            alert("Good , you can go for next level")
+            var q2 = prompt("which month has extra date")
+            if(q2 == 'Feb'){
+                document.write(`Congrats!! ${name} You have cleared the test `)
+            }
+            else{
+                alert("Wrong sorry you have not cleared the test")
+            }
+        }
+        else{
+            alert("Sorry , you input ..please try agin")
+        }
+    </script>
+
+
+</body>
+</html>

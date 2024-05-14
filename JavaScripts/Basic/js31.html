@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Event Listener</title>
+</head>
+<style>
+    *{
+        text-transform: capitalize;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+    }
+    body{
+        width: 100%;
+        background-color: #212121;
+    }
+    .container{
+        margin: 150px auto;
+        border: 3px solid #ddd;
+        padding: 10px 20px;
+        width: 50%;
+        text-align: center;
+    }
+    .btn{
+        margin: 20px 20px;
+    }
+    input{
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 12px 10px;
+        border-radius: 4px;
+        background-color: #212121;
+        outline: none;
+        border: none;
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+    input:hover{
+        background-color: #ddd;
+        color: #212121;
+    }
+
+</style>
+<body>
+    <h3>
+        create button 2  --create list (unorderlist) create color names (orderlist) list text is color max 10 (color list full)
+    </h3>
+    <div class="btn" style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 100px;">
+        <input type="button" value="Added Fruits Name" onclick="addFruits()">
+        <input type="button" value="Remove Fruits Name" onclick="removeFruits()">
+        <input type="button" value="Added Color Name" onclick="addColor()">
+        <input type="button" value="Remove Color Name" onclick="removeColor()">
+    </div>
+
+    <div class="container">
+        here all render from Javascript
+        <div style="display: flex; justify-content: space-evenly;">
+            <ul class="unorderedList">
+            </ul>
+            <ol class="orderedList">
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        //Logic Step Wise
+        // 1. click Button
+        // 2. check array list is less 10 - alert(max) and no - added fruit name and color name 
+        // 3. added fruit name and color name 
+
+
+        // initialize
+        var arrFruit = [] //global access //array will use only check less than 10 only
+        var arrColor = [] //global access
+        function addFruits(){
+            var fruitName; 
+            if (arrFruit.length < 10) {
+                fruitName = prompt(`Added a  Fruits(${arrFruit.length+1})  = `)
+                arrFruit.push(fruitName)
+
+                //output
+                var a = document.createElement('li')
+                var list = document.querySelector('.unorderedList')
+                a.textContent = fruitName;
+                list.appendChild(a)
+            }
+            else{
+                alert('Array is Full')
+            }
+        } 
+        function removeFruits(){
+            if(arrFruit.length != 0){
+                arrFruit.pop()
+                alert(`Remove is ${arrFruit.length+1} fruits items`)
+    
+                //output
+                var list = document.querySelector('.unorderedList');
+    
+                list.removeChild(list.lastElementChild);
+            }
+            else{
+                alert('Array is Empty')
+            }
+
+        }
+        function addColor(){
+            if(arrColor.length< 10){
+                var ColorName = prompt(`Added a Color(${arrColor.length+1}) Name = `)
+                arrColor.push(arrColor)
+
+                //output
+                var create = document.createElement('li')
+                var list = document.querySelector('.orderedList')
+                create.style.background = ColorName
+                create.textContent = ColorName
+                list.appendChild(create)
+            }
+            else{
+                alert('Array is FULL')
+            }
+        }
+        function removeColor(){
+            if(arrColor.length != 0){
+                arrColor.pop()
+                alert(`Remove is ${arrColor.length+1} Color items`)
+    
+                //output
+                var list = document.querySelector('.orderedList');
+                list.removeChild(list.lastElementChild);
+            }
+            else{
+                alert('Array is Empty')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        //Ques . is it dynamic array answer: Yes
+        //accept elem for marks array and print the addition of all marks
+        var marks = [];
+        // 
+        var sum = 0
+        count = parseInt(prompt("Enter array size"))
+
+        for(var i =0 ; i<count; i++){
+            marks[i] = parseInt(prompt("Enter marks:"));
+            sum = sum+ marks[i];
+        }
+        console.log("Addition of marks :="+sum)
+
+        var esum = 0 , osum = 0
+
+        for(var i = 0; i<count;i++){
+            if(marks[i]%2==0){
+                esum = esum+marks[i];
+            }
+            else{
+                osum = osum + marks[i];
+            }
+        }
+        console.log(`Even Marks Addition = ${esum}`)
+        console.log(`Odd Marks Addition = ${osum}`)
+
+
+        // Wap to print max marks from an array
+
+        var max = marks[marks.length-1];
+
+        for(var i=3;i<marks.length;i++){
+            if(max < marks[i]){
+                max = marks[i]
+            }
+        }
+        console.log("Max Number="+max)
+    </script>
+</body>
+</html>

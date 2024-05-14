@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+        }
+        div{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            animation: amim1 5s infinite alternate;
+        }
+        @keyframes amim1{
+            0%{
+                transform: rotate(1080deg);top: 300px; left: 240px ;border-radius: 50%;
+            }
+            25%{
+                transform: rotate(0deg); top: 0; left: 240px;
+            }
+            50%{
+               transform: rotate(1080deg); top: 600; left: 234px;
+            }
+            75%{
+                transform: rotate(1080deg);top: 300px; left: 720px;border-radius: 50%;
+            }
+            100%{
+                transform: rotate(0deg); top: 0; left: 860px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="boxs">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            position: relative;
+            animation: bodyan 5s infinite alternate ease; ;
+            background-color: black;
+        }
+        @keyframes bodyan{
+            100%{
+                background-color: white;
+            }
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+            background-color: white;
+        }
+        header{
+            display: flex;
+            position: relative;
+        }
+        @keyframes anim {
+            100%{
+                margin-left: 80%;
+                background-color: black;
+                color: white;
+            }
+        }
+        .d1{
+            animation: anim 5s infinite alternate ease;
+        }
+        .d2{
+            animation: anim 5s infinite alternate ease-in-out;
+        }
+        .d3{
+            animation: anim 5s infinite alternate ease-out;
+        }
+        .d4{
+            animation: anim 5s infinite alternate ease-in;
+        }
+        .d5{
+            animation: anim 5s infinite alternate linear;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="d1"> First Div</div>
+    </header>
+    <header>
+        <div class="d2">Second Div</div>
+    </header>
+    <header>
+        <div class="d3">Third Div</div>
+    </header>
+    <header>
+        <div class="d4">Fourth Div</div>
+    </header>
+    <header>
+        <div class="d5">Five Div</div>
+    </header>
+</body>
+</html>

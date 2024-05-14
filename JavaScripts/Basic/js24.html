@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        function fact(n){
+            if(n=>0){
+                if(n==1 || n==0){
+                    return 1
+                }
+                else{
+                    return fact(n-1)*n
+                }
+            }
+            else{
+                console.log('error')
+            }
+        }
+        console.log(`factorial of -1  =`,fact(-1))
+        
+    </script>
+</body>
+</html>

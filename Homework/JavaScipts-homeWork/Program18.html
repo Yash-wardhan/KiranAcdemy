@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h5>WAP function highlight all the words over 8 characters long in the paragraph text (with a yellow background)</h5>
+
+    <form">
+        <textarea name="Content" id="textarea" cols="30" rows="10" placeholder="Write Something..."></textarea>
+        <input type="button" value="Click" onclick="Check()">
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        function Check() {
+            var text = document.getElementById('textarea').value;
+            var words = text.split(/\s+/); // Split text into words
+
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = ''; // Clear previous content
+
+            words.forEach(function(word) {
+                var span = document.createElement('span');
+                span.textContent = word;
+
+                // Apply highlight class to words over 8 characters long
+                if (word.length > 8) {
+                    span.classList.add('highlight');
+                }
+
+                // Append the span to the output div
+                outputDiv.appendChild(span);
+                outputDiv.appendChild(document.createTextNode(' ')); // Add space between words
+            });
+        }
+    </script>
+</body>
+</html>

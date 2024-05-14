@@ -1,0 +1,36 @@
+<!-- i have one button caption "change style" on html page to "welcome to thekiranAcademy" user hover change style* text
+out another style. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipts</title>
+</head>
+<body>
+    <main>
+        <h1>Welcome To TheKiranAcademy</h1>
+    </main>
+
+
+    <!-- script  -->
+    <script>
+        // logic part 
+
+        // 1. select innerhtml
+        // 2. addeventlistener (mouseenter and Mouseleave)
+        // 3. add style  to the element when mouse enter and remove it when
+        var a = document.querySelector('h1')
+        a.addEventListener('mouseenter',()=>{
+            a.style.color='red';
+            a.style.alignContent='center';
+            a.style.fontFamily="TimesRoman";
+        })
+        a.addEventListener('mouseleave',()=>{
+            a.style.color='blue';
+            a.style.alignContent='left';
+            a.style.fontFamily="Arial";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="fun4()">
+    <p onclick="fun()">click</p>
+
+    <button onclick="add()"> addition</button>
+
+    <p onmouseout="fun1()">This is para one(mouse hover)</p>
+    <p onmouseover="fun2()">This is para one(mouse hover)</p>
+    <script>
+        function fun(){
+            alert("welcome")
+        }
+        function add(){
+            var a = b = 5
+            document.write('a+b =',a+b)
+        }
+        function fun1(){
+            document.write('okay')
+        }
+        function fun2(){
+            document.write('no im not okay')
+        }
+        function fun4(){
+            confirm("are you definite load page")
+        }
+    </script>
+</body>
+</html>

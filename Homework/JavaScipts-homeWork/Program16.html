@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        #container{
+            margin-top: 30px;
+            margin-left: 30px;
+            padding: 10px 20px;
+            width: 200px;
+            /* height: 300px; */
+            border: 3px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h5>create paragraph button an div element through in js</h5>
+    <button id="click" onclick="change()">Click ME !!!</button>
+
+    <div id="container">
+
+    </div>
+    <script>
+        function change(){
+            var par = document.createElement("p");
+            console.log(par)
+            // console.log(textContent)
+            par.textContent = "This is a dynamically created paragraph.";
+
+            var container = document.getElementById('container');
+            container.appendChild(par)
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h6>WAP to compute the sum of 2 integer . if the values are the same , then return triple thier sum using fun</h6>
+    <form name="f1">
+        <table>
+            <tr>
+                <td>Enter First Number</td>
+                <td><input type="text" name="num1"></td>
+            </tr>
+            <tr>
+                <td>Enter Second Number</td>
+                <td><input type="text" name="num2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Sum" onmouseenter="add()"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function add()
+        {
+            var num1 = parseInt(f1.num1.value)
+            var num2 = parseInt(f1.num2.value)
+            var sum
+            if(num1 === num2){
+                sum =  (num1**3)
+            }else{
+                sum = num1 + num2
+            }
+            document.write(`Sum of two number => ${sum}`)
+        }
+    </script>
+</body>
+</html>

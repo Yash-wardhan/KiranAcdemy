@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h6>wap fun that accept a string as a parameter and covert the first letter of each word into upper case</h6>
+    <form name="f1">
+        <table>
+            <tr>
+                <td>Enter Your String = </td>
+                <td><input type="text" name="str"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Check" onmousemove="uppercase()"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var str = f1.str.value
+        function uppercase(){
+            str = f1.str.value
+            const words = str.split(" ");
+            // Capitalize the first letter of each word
+            const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+            // Join the words back into a single string
+            document.write(capitalizedWords.join(" "));
+       }
+
+    </script>
+</body>
+</html>

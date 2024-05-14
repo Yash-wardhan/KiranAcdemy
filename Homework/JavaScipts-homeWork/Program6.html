@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+</head>
+<body>
+    <h3>Wap to print number given which divisible by 3 in table format</h3>
+    <Script>
+        // Ini.
+        var n1 = parseInt(prompt("Number Range 1 st "))
+        var n2 = parseInt(prompt("Number Range 2 nd "))
+
+        //format
+
+        document.write(`<table cellpadding = '7' border = '3' align = 'center' width = '50%'>`)
+        document.write(`<tr><td>Number</td><td>Divisible</td></tr>`)
+        for(var i =n1 ; i<= n2 ; i++){
+            if (i%3==0){
+                document.write(`<tr><td>3</td><td>${i}</td></tr>`)
+            }
+        }
+        document.write(`</table>`)
+    </Script>
+</body>
+</html>

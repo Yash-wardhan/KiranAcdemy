@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 100%; padding: 10px 20px; display: flex; flex-direction: column; justify-content: center;">
+    <%- include('../partials/header')  %>
+    <div class="h-100 w-100 container" style="height: 100vh; padding: 10px; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <h3 class="text-warning">This is article Page</h3>
+        <ol>
+            <% data.forEach((item)=>{%>
+                <li class="text-warning">
+                    <h5><%= item.title %></h2>
+                    <p><%= item.author %></p>
+                    <p><%= item.content %></p>
+                </li>
+            <% }) %>
+            </ol>
+    </div>
+    <%- include('../partials/footer') %>
+</body>
+</html>

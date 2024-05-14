@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript || DOM || Event Handling</title>
+</head>
+<body>
+    <!-- DOM and Event Handling  -->
+<pre>
+    DOM UTF - 8
+    1. Dynamically Create New Element 
+    2. Dynamically delete existing element
+    3. Dynamically set or get add new attribute
+    4. Dynamically change css of element 
+    5. Dynamically add new innerhtml within elements 
+
+
+    *Select --- DOM
+    getElementById()  - get the element by id
+    getElementByClassName() - get the element by class
+    getElementByTagName() - get the element by Tag
+    getElementByName - get the element by Name
+    querySelector() - All (id,class,Tag,Name)
+</pre>
+<h4>
+    <p id="textid" class="c1">This is my Para</p>
+    <p id="p1" class="c1">This is my second Para</p>
+    <p class="c1">This is my third Para</p>
+    <p class="c1">This is my fourth Para</p>
+    <h1 id="h1">JavaScript is open source Scripting Language</h1>
+    <input type="button" onclick="para()" value="Click">
+    <input type="button" onclick="Change()" value="Change Inner Html">
+    <input type="button" onclick="query()" value="Change query Html">
+    <h4 class="parag">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur impedit modi itaque suscipit amet, reprehenderit libero dicta fuga esse omnis, recusandae placeat! Eius, ea temporibus. Dolores, similique. Inventore fugit accusantium voluptate cumque tempora est laborum, reprehenderit repellat nesciunt neque, voluptatem ad iure sed, quia laboriosam. Perferendis velit, aut ab in culpa, et fugit aliquam cupiditate laborum corrupti, distinctio quod.</h4>
+    
+</h4>
+    <script>
+
+        //Select P Tag in gol variable 
+        // var b = document.getElementsByTagName('p')
+    
+        function para()
+        {
+            var p = document.getElementById('textid').innerHTML
+            var h = document.getElementById('h1').innerHTML
+            console.log(p)
+            alert(`${p} this text come from id name `)
+            alert(`${h} this text come from class name `)
+           console.log(b)
+           for(var i = 0; i<b.length ; i ++){
+            alert(b[i].innerHTML)
+           } 
+        }
+
+        function Change(){
+            // var p = document.getElementById('p1');
+            // p.innerHTML = "<p style = 'color:red''>This is new text</p>"
+            var b = document.getElementsByClassName('c1')
+            for(var i = 0 ; i<b.length; i++){
+                b[i].innerHTML = "<p style = 'color:red'>This text change" +(i+1)+"</p>"
+            }
+            // b[0].innerHTML = "<p style = 'color:red'>This text change ${i+1}</p>"
+        }
+        function query(){
+            document.querySelector('.parag').innerHTML = "<p>this is change</p>"
+        }
+    </script>
+
+    
+</body>
+</html>

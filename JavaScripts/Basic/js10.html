@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+</head>
+<body>
+    <script>
+       
+       //addition of even and odd number from
+       //    given range
+
+       var n1 = parseInt(prompt("Enter Your Your Number"))
+       var even = 0
+       var odd = 0
+
+    //    cal 
+    var i = 1
+
+    while(i<= n1){
+
+        if(i%2 == 0 ){
+            even = even + i
+            i++
+        }
+        else{
+            odd = odd + i
+            i++
+        }
+    }
+
+    //    output
+
+    alert(`odd: ${odd} and even : ${even}`)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

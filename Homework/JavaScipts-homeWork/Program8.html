@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale>=1.0">
+    <title>HomeWork</title>
+</head>
+<body>
+    <h4>
+        Wap Enter month , enter date enter year and to check date valid and invalid
+    </h4>
+    <script>
+
+        //in.
+        var year , month , date
+
+        year= parseInt(prompt("Enter Year:"))
+        //logic
+        if(year%4==0){
+            month = prompt("Enter Month:")
+            if(month == 'Feb'){
+                date = prompt("Enter date :")
+                if(date => 1 && date <= 29){
+                    alert("Valid")
+                }
+                else{
+                    alert("Invalid")
+                }
+            }
+            else if(month=="Jan"||month=="March"||month=="May"||month=="July"||month=="Aug"||month=="Oct"||month=="Dec"){
+                date = prompt("Enter date :")
+                if(date => 1 && date <= 31){
+                    alert("Valid")
+                }
+                else{
+                    alert("Invalid")
+                }
+            }
+            else if(month=="April"||month=="June"||month=="Sep"||month=="Nov"){
+                date = prompt("Enter date :")
+                if(date => 1 && date <=  31){
+                    alert("Valid")
+                }
+                else{
+                    alert("Invalid")
+                }
+            }
+        }
+        else{
+            month = prompt("Enter Month:")
+            if(month == 'Feb'){
+                date = prompt("Enter date :")
+                if(date => 1 && date <= 28){
+                    alert("Valid")
+                }
+                else{
+                    alert("Invalid")
+                }
+            }
+            else if(month=="Jan"||month=="March"||month=="May"||month=="July"||month=="Aug"||month=="Oct"||month=="Dec"){
+                date = prompt("Enter date :")
+                if(date => 1 && date <= 31){
+                    alert("Valid")
+                }
+                else{
+                    alert("Invalid")
+                }
+            }
+            else if(month=="April"||month=="June"||month=="Sep"||month=="Nov"){
+                date = prompt("Enter date :")
+                if(date => 1 && date <= 31){
+                    alert("Valid")
+                }
+                else{
+                    alert("Invalid")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

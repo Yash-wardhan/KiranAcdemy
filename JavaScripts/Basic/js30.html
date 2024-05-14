@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    #container{
+        width: 300px;
+        margin: 50px;
+        padding: 20px 30px;
+        border:  1px solid #ddd;
+    }
+
+</style>
+<body onload="load()">
+    <p class="removeee">click to button --> added Para</p>
+    <p>
+        <button class="font-semibold rounded-full px-4 py-2 border-2 mt-10" onclick="create() " id="hi">Submit</button>
+        <button class="font-semibold rounded-full px-4 py-2 border-2 mt-10" onclick="remove_Eleml()">Remove</button>
+        <button class="font-semibold rounded-full px-4 py-2 border-2 mt-10" id="newbtn">Click me !!!</button>
+    </p>
+    <div id="container">
+
+    </div>
+    <script>
+        var para;
+        function create(){
+            a=20
+            console.log(a)
+            // para = document.createElement("p")
+            // var innerTxt = document.createTextNode("Added Para")
+
+            // para.setAttribute("id","para1")
+
+            // para.appendChild(innerTxt)
+            // var con = document.getElementById("container")
+            // container.appendChild(para)
+        }
+        // function remove_Eleml(){
+        //     var e = document.getElementById('para1')
+        //     container.remove(e)
+        // }
+        // function load(){
+        //     var e = document.querySelector('#newbtn').addEventListener("click",function(){
+        //         console.log("click")
+        //     })
+        //     e.addEventListener('mouseover',function(){
+        //         console.log("mouse over")
+        //     })
+        //     e.addEventListener('mouseleave',function(){
+        //         console.log("mouse leave")
+        //     })
+        // }
+        // function load(){
+        //     var e = document.querySelector('#h1').addEventListener("mouseover",function(){
+        //         console.log("click")
+        //     })
+        // }
+    </script>
+</body>
+</html>

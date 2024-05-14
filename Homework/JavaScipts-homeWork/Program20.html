@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: blue;
+    }
+    .wrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        padding: 30px 20px;
+    }
+    .container{
+        width: 600px;
+        height: 500px;
+        background: #000;
+        border: 20px solid #000;
+    }
+    .image-container{
+        display: flex;
+        gap: 20px;
+    }
+    .image-container img{
+        width: 100px;
+        transition: .3s ease-in-out;
+        cursor: ew-resize;
+    }
+    .img1:hover{
+        scale: 1.4;
+    }
+    .img2:hover{
+        scale: 1.4;
+    }
+    .img3:hover{
+        scale: 1.4;
+    }
+    .img4:hover{
+        scale: 1.4;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body onload="start()">
+    <div class="wrapper">
+        <div class="container">
+            <!-- Show images with text -->
+        </div>
+        <div class="image-container">
+            <div class="img1">
+                <img src="https://images.unsplash.com/photo-1708861177937-70c66c166609?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img1">
+            </div>
+            <div class="img2">
+                <img src="https://images.unsplash.com/photo-1708936120323-4f34ce5284b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img2" class="img2">
+            </div>
+            <div class="img3">
+                <img src="https://images.unsplash.com/photo-1708913156945-df01fdf89809?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img3" class="img3">
+            </div>
+            <div class="img4">
+                <img src="https://images.unsplash.com/photo-1708793669552-867b12eed4e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Img4" class="img4">
+            </div>
+        </div>
+    </div>
+    <script>
+        //logic  for adding image to the container and showing it in the preview
+        const start = () =>{
+            var a = document.querySelector('.img1')
+            var b = document.querySelector('.img2')
+            var c = document.querySelector('.img3')
+            var d = document.querySelector('.img4')
+            var con = document.querySelector('.container')
+            a.addEventListener('click',function(){
+                con.innerHTML = a.innerHTML
+            })
+            b.addEventListener('click',function(){
+                con.innerHTML = b.innerHTML
+            })
+            c.addEventListener('click',function(){
+                con.innerHTML = c.innerHTML
+            })
+            d.addEventListener('click',function(){
+                con.innerHTML = d.innerHTML
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js14</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    table{
+        width: 300px;
+    }
+</style>
+<body>
+    <script>
+        //int
+
+        var salary  = parseInt(prompt("Salary:"))
+        //logic
+        document.write("<table border = '5' cellpadding = 20 >")
+        if(salary >= 10000 ){
+            var b = 15000
+            var h = ((20/100)*salary)
+            var t = ((10/100)*salary)
+           
+        }
+        else{
+            var b = 5000
+            var h = 12000
+            var t = 10000
+        }
+        document.write(`<tr><td>Salary</td><td>${salary}</td></tr>`)
+            document.write(`<tr><td>HRA</td><td>${h}</td></tr>`)
+            document.write(`<tr><td>TA</td><td>${t}</td></tr>`)
+            document.write(`<tr><td>Bonus</td><td>${b}</td></tr>`)
+            document.write(`<tr><td>Total</td><td>${(b+h+t+salary)}</td></tr>`)
+        document.write("</table>")
+    </script>
+</body>
+</html>

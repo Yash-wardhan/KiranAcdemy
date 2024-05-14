@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS With function</title>
+</head>
+<body>
+    <h5>addition of number which is divisible by 5 from 50 to 100</h5>
+    <script>
+
+        //1. with argument and return
+
+        function divisible(a){
+            var sum1 = 0
+            for(var i = 50; i<=100 ; i++ ){
+                if(i%a==0){
+                    sum1+=i
+                }
+            }
+            return sum1
+        }
+        document.write(`Sum of 50 to 100 with divisible by 5 = ${divisible(5)}`)
+
+        //2. without argument and return
+        function divisible(){
+            var sum2 = 0
+            for(var i = 50; i<=100 ; i++ ){
+                if(i%5==0){
+                    sum2+=i
+                }
+            }
+            return sum2
+        }
+        console.log(`Sum of 50 to 100 with divisible by 5   =${divisible()}`)
+
+        //3. without argument and no return
+
+        function divisible(){
+            var sum3 = 0
+            for(var i = 50; i<=100 ; i++ ){
+                if(i%5==0){
+                    sum3+=i
+                }
+            }
+            console.log(`Sum of 50 to 100 with divisible by 5   =${sum3}`)
+        }
+        divisible()
+
+    </script>
+
+
+</body>
+</html>
