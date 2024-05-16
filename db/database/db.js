@@ -1,20 +1,20 @@
+// ./database/db.js
 const { MongoClient } = require('mongodb');
-// Connection URL
+
 const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
+const dbName = 'Mern';
 
-// Database Name
-const dbName = "Mern";
-
-function main() {
-  // Use connect method to connect to the server
-  client.connect();
-  console.log('Connected successfully to server');
-  const db = client.db(dbName);
-  const collection = db.collection('Product');
-  console.log('collection created success')
-  return 'done.';
+async function connectToDatabase() {
+    try {
+        const client = new MongoClient(url);
+        await client.connect();
+        const db = client.
+        console.log('Connected successfully to MongoDB server');
+        return client.db(dbName);
+    } catch (error) {
+        console.error('Error connecting to MongoDB:', error);
+        throw error;
+    }
 }
-main()
-  .then(console.log('prefect'))
-  .catch(console.error);
+
+module.exports = connectToDatabase;
